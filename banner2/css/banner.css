@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body,
+*,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+.flexslider {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.flexslider .slides li {
+    width: 100%;
+    height: auto;
+}
+
+.flex-direction-nav a {
+    position: absolute;
+    margin: -35px 0 0;
+    top: 50%;
+    z-index: 10;
+    display: block;
+    overflow: hidden;
+    width: 70px;
+    height: 70px;
+    font: normal 65px/70px 宋体;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    background: #000;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    -moz-opacity: 0.3;
+    -khtml-opacity: 0.3;
+    -webkit-transition: all .3s ease;
+    border-radius: 35px;
+    -moz-border-radius: 35px;
+    /* Gecko browsers */
+    -webkit-border-radius: 35px;
+    /* Webkit browsers */
+    border-radius: 35px;
+    /* W3C syntax */
+    behavior: url(/templets/pc/js/PIE.htc);
+}
+
+.flex-direction-nav .flex-next {
+    right: 0;
+}
+
+.flex-direction-nav .flex-prev {
+    left: 0;
+}
+
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {
+    opacity: .65;
+    filter: alpha(opacity=65);
+    -moz-opacity: .65;
+    -khtml-opacity: .65;
+}
+
+.flex-control-nav {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.flex-control-nav li {
+    margin: 0 2px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.flex-control-paging li a {
+    text-indent: -99em;
+    display: block;
+    overflow: hidden;
+    height: 14px;
+    width: 14px;
+    background: #888;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    /* Gecko browsers */
+    -webkit-border-radius: 50%;
+    /* Webkit browsers */
+    border-radius: 50%;
+    /* W3C syntax */
+    behavior: url(/templets/pc/js/PIE.htc);
+}
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {
+    background: #000;
+    opacity: 1;
+    filter: alpha(opacity=1);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+}
+
+.flexslider .slides a img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    border: 0;
+}

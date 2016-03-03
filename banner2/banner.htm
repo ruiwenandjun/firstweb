@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>banner</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="css/banner.css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        var bannerSlider = new Slider($('#banner_tabs'), {
+
+            time: 3500,
+
+            delay: 500,
+
+            event: 'hover',
+
+            auto: true,
+
+            mode: 'fade',
+
+            controller: $('#bannerCtrl'),
+
+            activeControllerCls: 'active'
+
+        });
+
+        $('#banner_tabs .flex-prev').click(function() {
+
+            bannerSlider.prev()
+
+        });
+
+        $('#banner_tabs .flex-next').click(function() {
+
+            bannerSlider.next()
+
+        });
+
+    })
+    </script>
+    <!-- banner -->
+</head>
+
+<body>
+    <div id="banner_tabs" class="flexslider">
+        <ul class="slides">
+            <li>
+                <a href="#"><img style="background: url(images/tu1.jpg) no-repeat center; background-size:cover;"></a>
+            </li>
+            <li>
+                <a href="#"><img style="background: url(images/tu2.jpg) no-repeat center; background-size:cover;"></a>
+            </li>
+            <li>
+                <a href="#"><img style="background: url(images/tu3.jpg) no-repeat center; background-size:cover;"></a>
+            </li>
+            <li>
+                <a href="#"><img style="background: url(images/tu4.jpg) no-repeat center; background-size:cover;"></a>
+            </li>
+        </ul>
+        <ul class="flex-direction-nav">
+            <li>
+                <a class="flex-prev" href="javascript:;">
+                    <</a>
+            </li>
+            <li>
+                <a class="flex-next" href="javascript:;">></a>
+            </li>
+        </ul>
+        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+            <li class="active">
+                <a>1</a>
+            </li>
+            <li>
+                <a>2</a>
+            </li>
+            <li>
+                <a>3</a>
+            </li>
+            <li>
+                <a>4</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
